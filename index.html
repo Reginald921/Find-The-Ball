@@ -9,18 +9,15 @@
 <body>
   <div id="container">
     <article id="game_container">
-      <h1>The Cup Game</h1>
+      <h1 class="title_size">The Cup Game</h1>
       <br>
-      <button class="button1" ><img src="/pics/blue-cup-md.png" alt=""></button>
-      <button class="button2" ><img src="/pics/blue-cup-md.png" alt=""></button>
-      <button class="button3" ><img src="/pics/blue-cup-md.png" alt=""></button>
+      <button class="btn1" id="1" onClick="BtnClick(this.id)"><img id="myImage1" src="/pics/blue-cup-md.png" alt=""></button>
+      <button class="btn2" id="2" onClick="BtnClick(this.id)"><img id="myimage2" src="/pics/blue-cup-md.png" alt=""></button>
+      <button class="btn3" id="3" onClick="BtnClick(this.id)"><img id="myimage3" src="/pics/blue-cup-md.png" alt=""></button>
       <br>
-    
-
-      <p>Choose a cup to find the BALL</p>
-
-      <button id="results_container">result box</button>
-      <button>restart game</button>
+      <p class="padding">Choose a cup to find the BALL</p>
+      <button class="results_Btn" id="result_id"></button>
+      <button class="restart_Btn" id="reset">restart game</button>     
 
     </article>
   </div>

@@ -21,6 +21,37 @@
 
 #game_container {
   width: 650px;
-  background: white;
-
 }
+
+.title_size {
+  font-size: 56px;
+}
+
+.direction_size {
+  font-size: 28px;
+}
+
+.padding {
+  font-size: 32px;
+  margin: 30px;
+}
+
+ .results_Btn {
+  background: green;
+  border: none;
+  color: rgb(110, 20, 20);
+  padding: 15px 32px;
+  font-weight: bold;
+  font-size: 32px;
+  margin: 20px;
+  cursor: pointer;
+ } 
+
+ .restart_Btn {
+  background-color: yellow;
+  width: 30%;
+  padding: 15px 30px;
+  font-size: 16px;
+  margin: 20px 50px 20px 100px;
+  cursor: pointer;
+ }
