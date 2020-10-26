@@ -4,10 +4,7 @@ let randomBall = (min, max) =>  {
     let ballValue = (randomBall(1, 4));
  console.log(ballValue);
 
-let clicked_id = 9;
-let decision = 0;
-let result_txt = "blank";
-  chosenBtn = 0;
+
   console.log(chosenBtn);
 
 BtnClick();
@@ -38,15 +35,25 @@ function verdict() {
     if(decision == "win") {
       result_txt = "You Win!!!";
       console.log(result_txt);
-      // document.getElementById(result_id).innerHTML = result_txt;
+      document.getElementById('result_id').innerHTML = result_txt;
   
      } else if (decision == "blank") {
       result_txt = " ";
       console.log(result_txt);
+      document.getElementById('result_id').innerHTML = result_txt;
      } else if (decision == "lost") {
      result_txt = "Try Again!";
      console.log(result_txt);
+     document.getElementById('result_id').innerHTML = result_txt;
      }
     }
 
-    document.getElementById(result_id).innerHTML = result_txt;
+    function restart_Game() {
+     clicked_id = 9;
+     decision = 0;
+     result_txt = " ";
+     chosenBtn = 0;
+     document.getElementById('result_id').innerHTML = result_txt;
+     ballValue = (randomBall(1, 4));
+    }
+   
