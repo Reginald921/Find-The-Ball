@@ -48,6 +48,8 @@ function verdict() {
      }
     }
 
+    
+
     function restart_Game() {
      clicked_id = 9;
      decision = 0;
