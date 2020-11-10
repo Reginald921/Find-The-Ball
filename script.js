@@ -1,3 +1,4 @@
+let chosenBtn = 0;
 let randomBall = (min, max) =>  {
   return Math.floor(Math.random() * (max - min) + min);
     };
@@ -13,6 +14,7 @@ function BtnClick(clicked_id) {
      console.log(chosenBtn + "cup")
      console.log(ballValue + "ball");
     verdict();
+    change_cup();
 }
 
 function verdict() {
@@ -20,15 +22,16 @@ function verdict() {
     decision = "blank";
     console.log(decision);
     result_log();
-   } else if (ballValue == chosenBtn) {
-    decision = "win";
-    console.log(decision);
-    result_log();
-   } else if (ballValue !== chosenBtn)
-    decision = "lost";
-   console.log(decision);
-   result_log();
-   }
+  } else if (ballValue == chosenBtn) {
+      decision = "win";
+      console.log(decision);
+      result_log();
+  } else if (ballValue !== chosenBtn) {
+      decision = "lost";
+      console.log(decision);
+      result_log();
+    }
+  }
    
 
    function result_log() {
@@ -46,9 +49,18 @@ function verdict() {
      console.log(result_txt);
      document.getElementById('result_id').innerHTML = result_txt;
      }
+    
     }
 
-    
+    function change_cup() {
+      for (let i = 1; i < 4; i++)
+        if (i == chosenBtn && i == ballValue) {
+         document.getElementById([i]).innerHTML = '<img src="/beachBall.png"alt="beach ball">';
+        } else {
+          document.getElementById([i]).innerHTML = '<img  src="/redXpng.jpg"alt="red x">';
+        }
+
+    }
 
     function restart_Game() {
      clicked_id = 9;
@@ -57,5 +69,9 @@ function verdict() {
      chosenBtn = 0;
      document.getElementById('result_id').innerHTML = result_txt;
      ballValue = (randomBall(1, 4));
+     document.getElementById(1).innerHTML = '<img src="/pics/blue-cup-md.png" alt="blue cup">';
+     document.getElementById(2).innerHTML = '<img src="/pics/blue-cup-md.png" alt="blue cup">';
+     document.getElementById(3).innerHTML = '<img src="/pics/blue-cup-md.png" alt="blue cup">';
+
     }
    
