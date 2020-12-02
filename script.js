@@ -13,23 +13,24 @@ function BtnClick(clicked_id) {
      chosenBtn = clicked_id;
      console.log(chosenBtn + "cup")
      console.log(ballValue + "ball");
-    verdict();
-    change_cup();
+    verdict();  
 }
 
 function verdict() {
   if(ballValue == 0 || chosenBtn == 0 || chosenBtn == undefined) {
     decision = "blank";
     console.log(decision);
-    result_log();
+   
   } else if (ballValue == chosenBtn) {
       decision = "win";
       console.log(decision);
       result_log();
+      change_cup();
   } else if (ballValue !== chosenBtn) {
       decision = "lost";
       console.log(decision);
       result_log();
+      change_cup();
     }
   }
    
@@ -54,6 +55,7 @@ function verdict() {
 
     function change_cup() {
       for (let i = 1; i < 4; i++)
+     
         if (i == chosenBtn && i == ballValue) {
          document.getElementById([i]).innerHTML = '<img src="/beachBall.png"alt="beach ball">';
         } else {
